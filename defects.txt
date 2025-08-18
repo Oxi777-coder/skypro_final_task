@@ -1,21 +1,205 @@
 При выполнении работы найдены и исправлены следующие ошибки:
 
 Файл index.html.
-1. Лишний пробел в подвале страницы. Сейчас "202 4", а должно быть "2024".
-2. ...
-3. ...
-4. ...
+1. Опечатка в заголовке:
+Необходимо исправить “Основныые” на “Основные” и “ Интрументы” на “Инструменты”
+2. Лишний закрывающий тег </p>:
+</p> Этот тег не нужен, так как предыдущего открывающего тега p нет.
+3. Опечатка в названии Windows:
+<a href="html/cmd.html">Командная строка Windos</a>
+Необходимо исправить “Windos” на “Windows”
+4. Неверная версия года:
+&copy; 202 4. SkyPro
+Необходимо исправить на “2024”
+Исправленный код:
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portal for QA</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+      <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <!--Card-->
+      <div class="card animated fadeIn">
+         <center><img class="center animated rollIn" src="img/ava.png" alt="avatar"></center>
+         <hr>
+         <div class="name">
+            Основные Инструменты
+         </div>
+         <p class="subtitle">Тестирование WEB-приложений</p>
+         <p class="location" align="center">
+            <a href="html/cmd.html">Командная строка Windows</a>
+         </p>
+         <p class="location" align="center">
+            <a href="html/mac.html">Терминал MacOS</a>
+         </p>
+         <p class="location" align="center">
+            <a href="html/git.html">Git</a>
+         </p>
+         <p> <br>
+         </p>
+      </div>
+      <!--footer-->
+      <footer class="animated fadeIn">
+         &copy; 2024. SkyPro
+      </footer>
+   </body>
+</html>
+
 
 Файл cmd.html.
-1. ...
-2. ...
-3. ...
+1. Несоответствие идентификаторов: 
+В заголовке “Системная информация” необходимо использовать уникальные идентификаторы. В файле есть идентификатор id="rt-3", а перед этим был id="rt-1". Необходимо убедиться, что все идентификаторы уникальны и последовательны.
+2. Неверная версия года:
+&copy; 202 4. SkyPro
+Необходимо исправить на “2024”
+3. Пунктуация:
+В некоторых местах список команд не завершен, вы можете добавить точки в конце или оставить без них. Например: <li>CD - Отображение файлов и папок в текущем каталоге </li>  
+Исправленный код:
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portal for QA</title>
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+      <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <!--Card-->
+      <div class="card animated fadeIn">
+         <p class="subtitle">Командная строка Windows</p>
+         <h3 id="rt-0">Управление файлами и папками</h3>
+         <ul>
+            <li>COPY – Копирование файлов в другое место.</li>
+            <li>DIR – Изменить каталог.</li>
+            <li>CD – Отображение файлов и папок в текущем каталоге.</li>
+            <li>MAKEDIR – Создать папку.</li>
+            <li>MOVE – Переместить файлы из одной папки в другую.</li>
+         </ul>
+         <h3 id="rt-1">Приложения и процессы</h3>
+         <ul>
+            <li>TASKLIST – Список выполняемых задач.</li>
+            <li>TASKKILL – Остановить или прекратить выполнение задачи (для остановки задачи используется PID, который можно узнать из TASKLIST).</li>
+         </ul>
+         <h3 id="rt-2">Системная информация</h3>
+         <ul>
+            <li>DATE – Выводит или устанавливает системное время.</li>
+            <li>TIME – Выводит или устанавливает текущую дату.</li>
+            <li>HOSTNAME – Отображает имя компьютера.</li>
+            <li>SYSTEMINFO – Отображает информацию о конфигурации компьютера.</li>
+            <li>VER – Позволяет просмотреть версию Windows.</li>
+         </ul>
+      </div>
+      <!--footer-->
+      <footer class="animated fadeIn">
+         &copy; 2024. SkyPro
+      </footer>
+   </body>
+</html>
 
 Файл mac.html.
-1. ...
-2. ...
+1. Опечатка в заголовке:
+<title>Терминал MaOS</title>
+Необходимо исправить Необходимо исправить “MaOS” на “MacOS”
+2.Технические ошибки в описаниях команд:
+Для команд mv и mkdir descriptions присутствуют ошибки: 
+mv - это команда для перемещения или переименования файлов, не для создания папки.
+mkdir - это команда для создания директории, а не для перемещения.
+Эти строки должны быть скорректированы:
+<li>mv - расшифровывается как “Move”, что переводится как “переместить” или "переименовать". </li>
+<li>mkdir - расшифровывается как “Make directory”, что переводится как “создать папку”.
+</li>
+3. Орфографические ошибки:
+В слове “расшифровывается” в строке с mkdir написано “расфшифровывается” – необходимо исправить на “расшифровывается”.
+Недостаток завершающей пунктуации: в некоторых случаях лучше закончить пункты в списке знаком препинания (точкой).
+Исправленный код:
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Терминал MacOS</title>
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+      <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <!--Card-->
+      <div class="card animated fadeIn">
+         <p class="subtitle">Терминал MacOS</p>
+         <ul>
+            <li>ls - расшифровывается как "List files in the directory", что переводится как "перечислить все файлы в папке" или "вывести на экран список файлов в папке".</li>
+            <li>cd - расшифровывается как "Change directory", что переводится как "сменить папку" или "перейти в другую папку".</li>
+            <li>pwd - расшифровывается как "Present working directory", что переводится как "текущая рабочая директория". То есть команда pwd показывает, в какой сейчас папке мы находимся.</li>
+            <li>mv - расшифровывается как "Move", что переводится как "переместить" или "переименовать".</li>
+            <li>mkdir - расшифровывается как "Make directory", что переводится как "создать папку".</li>
+         </ul>
+      </div>
+      <!--footer-->
+      <footer class="animated fadeIn">
+         <p class="location" align="center">
+            <a href="../index.html">Вернуться на главную</a>
+         </p>
+         &copy; 2024. SkyPro
+      </footer>
+   </body>
+</html>
 
 Файл git.html
-1. ...
-2. ...
-3. ...
+1. Некорректный заголовок:
+<title>Git - всему голова!</title>
+Заголовок выглядит нормально, но он может быть улучшен. Например, можно добавить “Git” в начале заголовка, чтобы яснее указать содержание страницы.
+2. Список команд Git:
+В данном коде привязаны команды, которые больше относятся к терминалу. Необходимо выделить команды, связанные непосредственно с Git, например, такие как git init, git clone, git commit и т.д.
+3. Опечатка в слове:
+<li>mv - расфшифровывается как “Move”, что переводится как “переместить”, “передвинуть”. С помощью нее можно переместить, переименовать или удалить файл/</li>
+Необходимо исправить “расфшифровывается” на “расшифровывается”. Также в конце строки есть лишний символ "/" – его необходимо заменить на точку.
+4. Опечатка в ссылке:
+<a href="mac.html">Вернуся на главную</a>
+Необходимо исправить “Вернуся” на “Вернуться”
+5.  Неверная версия года:
+&copy; 202 4. SkyPro
+Необходимо исправить на “2024”
+Исправленный код:
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Git - всем голова!</title>
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+      <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <!--Card-->
+      <div class="card">
+         <p class="subtitle">Git</p>
+         <ul>
+            <li>ls - расшифровывается как "List files in the directory", что переводится как "перечислить все файлы в папке" или "вывести на экран список файлов в папке".</li>
+            <li>cd - расшифровывается как "Change directory", что переводится как "сменить папку" или "перейти в другую папку".</li>
+            <li>pwd - расшифровывается как "Present working directory", что переводится как "текущая рабочая директория". То есть команда pwd показывает, в какой сейчас папке мы находимся.</li>
+            <li>mkdir - расшифровывается как "Make directory", что переводится как "создать папку".</li>
+            <li>mv - расшифровывается как "Move", что переводится как "переместить" или "переименовать". С помощью нее можно переместить, переименовать или удалить файл.</li>
+         </ul>
+      </div>
+      <!--footer-->
+      <footer class="animated fadeIn">
+         <p class="location" align="center">
+            <a href="mac.html">Вернуться на главную</a>
+         </p>
+         &copy; 2024. SkyPro
+      </footer>
+   </body>
+</html>
+
